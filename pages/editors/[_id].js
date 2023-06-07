@@ -2,7 +2,7 @@ import axios from "axios";
 
 export async function getStaticPaths() {
   const res = await axios.get(
-    "http://test.zoonobet.com/editor?limit=999&pageNumber=1"
+    "http://uat-apidb.zoonobet.com/editor?limit=999&pageNumber=1"
   );
   const data = res.data;
 
@@ -13,7 +13,9 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const res = await axios.get(`http://test.zoonobet.com/editor/${params._id}`);
+  const res = await axios.get(
+    `http://uat-apidb.zoonobet.com/editor/${params._id}`
+  );
   const editorData = res.data;
 
   return {

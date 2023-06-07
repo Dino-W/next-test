@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export async function getStaticProps() {
   const res = await axios.get(
-    "http://test.zoonobet.com/editor?limit=999&pageNumber=1"
+    "http://uat-apidb.zoonobet.com/editor?limit=999&pageNumber=1"
   );
   const data = res.data;
 
